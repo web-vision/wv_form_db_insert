@@ -25,6 +25,7 @@ class Input
 {
     /**
      * Contains the key-value pair of user input.
+     *
      * @var array
      */
     protected $rawFormInputs = [];
@@ -40,6 +41,11 @@ class Input
         }
     }
 
+    /**
+     * Get raw input of form.
+     *
+     * @return array
+     */
     public function getFormInput()
     {
         return $this->rawFormInputs;

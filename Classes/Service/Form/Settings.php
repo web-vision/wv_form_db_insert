@@ -22,6 +22,15 @@ namespace WebVision\WvFormDbInsert\Service\Form;
 class Settings
 {
     /**
+     * Configuration of further columns in TypoScript.
+     *
+     * @var string
+     */
+    const SETTINGS_COLUMNS = 'columns';
+
+    /**
+     * The TypoScript configuration.
+     *
      * @var array
      */
     protected $settings = [];
@@ -49,8 +58,8 @@ class Settings
     public function getConfiguredValues()
     {
         $configuredInputs = [];
-        if (isset($this->settings['columns'])) {
-            $configuredInputs = $this->settings['columns'];
+        if (isset($this->settings[static::SETTINGS_COLUMNS])) {
+            $configuredInputs = $this->settings[static::SETTINGS_COLUMNS];
         }
 
         return $configuredInputs;
@@ -67,7 +76,7 @@ class Settings
             [
                 'pid',
             ],
-            array_keys($GLOBALS['TCA'][$this->getTableName()]['columns'])
+            array_keys($GLOBALS['TCA'][$this->getTableName()][static::SETTINGS_COLUMNS])
         );
     }
 
