@@ -2,9 +2,22 @@
     "name": "web-vision/wv_form_db_insert",
     "type": "typo3-cms-extension",
     "description": "Allow inserts of data via core Form extension. E.g. for registrations of fe_users.",
-    "homepage": "http://web-vision.de",
+    "homepage": "https://github.com/web-vision/wv_form_db_insert",
     "license": [
         "GPL-2.0+"
+    ],
+    "authors": [
+        {
+            "name": "Daniel Siepmann",
+            "email": "coding@daniel-siepmann.de",
+            "homepage": "http://daniel-siepmann.de/"
+        }
+    ],
+    "keywords": [
+        "TYPO3",
+        "CMS",
+        "registration",
+        "form"
     ],
     "require": {
         "typo3/cms": "~7.6",
