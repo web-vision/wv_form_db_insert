@@ -4,11 +4,15 @@
     "description": "Allow inserts of data via core Form extension. E.g. for registrations of fe_users.",
     "homepage": "http://web-vision.de",
     "license": [
-        "GPL-3.0+"
+        "GPL-2.0+"
     ],
+    "require": {
+        "typo3/cms": "~7.6",
+        "php": ">=5.6.0"
+    },
     "autoload": {
         "psr-4": {
-            "WebVision\\WvFormDbInser\\": "Classes"
+            "WebVision\\WvFormDbInsert\\": "Classes"
         }
     }
 }
