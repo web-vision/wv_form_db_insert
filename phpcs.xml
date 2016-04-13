@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<ruleset name="TYPO3 Coding Guideline">
+    <file>.</file>
+
+    <rule ref="Wvtypo3cms" />
+</ruleset>
