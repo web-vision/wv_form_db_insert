@@ -59,7 +59,7 @@ class HashInput extends Form\AbstractPostProcessor implements Form\PostProcessor
     {
         $objectManager = GeneralUtility::makeInstance(ObjectManager::class);
         $this->settings = $objectManager->get(TypoScriptService::class)
-                ->convertTypoScriptArrayToPlainArray($typoScript);
+            ->convertTypoScriptArrayToPlainArray($typoScript);
         if (!isset($this->settings['fields'])) {
             throw new \InvalidArgumentException('');
         }
