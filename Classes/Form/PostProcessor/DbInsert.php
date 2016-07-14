@@ -96,17 +96,16 @@ class DbInsert extends Form\AbstractPostProcessor implements Form\PostProcessorI
      */
     protected function buildDbInsert()
     {
-        return array_filter(
-            $this->getMergedInputs(),
-            function ($inputName) {
-                if (!in_array($inputName, $this->settings->getAllowedColumnNames())) {
-                    return false;
-                }
+        $inserts = [];
+        foreach ($this->getMergedInputs() as $inputName => $mergedInput) {
+            if (!in_array($inputName, $this->settings->getAllowedColumnNames())) {
+                continue;
+            }
 
-                return true;
-            },
-            ARRAY_FILTER_USE_KEY
-        );
+            $inserts[] = $mergedInput;
+        }
+
+        return $inserts;
     }
 
     /**
