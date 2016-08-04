@@ -35,9 +35,28 @@ class Input
      */
     public function __construct(ObjectStorage $inputs)
     {
+        $this->fetchInputOfField($inputs);
+    }
+
+    /**
+     * Fetch input value of given inputs.
+     *
+     * Will walk them recursive and fetch the provided value in each input.
+     * They will be saved in rawFormInputs
+     *
+     * @param ObjectStorage $inputs
+     *
+     * @return void
+     */
+    protected function fetchInputOfField(ObjectStorage $inputs)
+    {
         foreach ($inputs as $input) {
-            $inputInformation = $input->getAdditionalArguments();
-            $this->rawFormInputs[$inputInformation['name']] = $inputInformation['value'];
+            if ($input->getElementType() === 'FIELDSET') {
+                $this->getInputOfField($input->fetchChildElements());
+            } else {
+                $inputInformation = $input->getAdditionalArguments();
+                $this->rawFormInputs[$inputInformation['name']] = $inputInformation['value'];
+            }
         }
     }
 
