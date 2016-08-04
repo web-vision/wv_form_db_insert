@@ -35,9 +35,18 @@ class Input
      */
     public function __construct(ObjectStorage $inputs)
     {
+        $this->getInputOfField($inputs);
+    }
+
+    protected function getInputOfField(ObjectStorage $inputs)
+    {
         foreach ($inputs as $input) {
-            $inputInformation = $input->getAdditionalArguments();
-            $this->rawFormInputs[$inputInformation['name']] = $inputInformation['value'];
+            if ($input->getElementType() === 'FIELDSET') {
+                $this->getInputOfField($input->getChildElements());
+            } else {
+                $inputInformation = $input->getAdditionalArguments();
+                $this->rawFormInputs[$inputInformation['name']] = $inputInformation['value'];
+            }
         }
     }
 
