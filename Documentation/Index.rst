@@ -49,5 +49,5 @@ The first example will look like:
     Installation
     Usage
     Configuration
+    Changelog
     Contribution
-
