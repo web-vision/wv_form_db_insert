@@ -11,4 +11,4 @@
    :class: typoscript
 
 .. default-role:: code
-.. highlight:: php
+.. highlight:: typoscript

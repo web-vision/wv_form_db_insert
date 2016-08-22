@@ -1,5 +1,4 @@
 .. include:: Includes.txt
-.. highlight:: typoscript
 
 .. _start:
 
@@ -48,7 +47,7 @@ The first example will look like:
 .. toctree::
 
     Installation
-    Configuration
     Usage
+    Configuration
     Contribution
 
