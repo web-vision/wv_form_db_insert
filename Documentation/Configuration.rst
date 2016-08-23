@@ -14,8 +14,8 @@ The extension provides two different post processors which can be configured.
 
 .. _db-insert:
 
-WebVision\\WvFormDbInsert\\Form\\PostProcessor\\DbInsert
---------------------------------------------------------
+DbInsert
+--------
 
 This post processor will insert the data as is into the database.
 
@@ -34,8 +34,8 @@ Example:
 
 .. _hash-input:
 
-WebVision\\WvFormDbInsert\\Form\\PostProcessor\\HashInput
----------------------------------------------------------
+HashInput
+---------
 
 This post processor will hash configured input by using TYPO3 Core API.
 
