@@ -14,15 +14,16 @@ reporting an issue against them.
 
 | Version        | Supported           |
 | -------------- | ------------------- |
-| 1.x            | :x:                 |
-| < 1.0          | :x:                 |
+| none.x         | :x:                 |
+| none.x         | :x:                 |
+| < none.0       | :x:                 |
 
 > **Note:** this product declares no TYPO3 version requirement, so its supported
 > versions cannot be derived from the TYPO3 release lifecycle. Support for a current
 > TYPO3 version may be added in the future; if you depend on this product, please get
 > in touch through the reporting channel below.
 
-Planned end of support for this product: **not applicable — this product declares no TYPO3 version requirement**.
+Planned end of support for this product: **unknown (end of regular TYPO3 1 LTS support)**.
 
 ## Reporting a Vulnerability
 
